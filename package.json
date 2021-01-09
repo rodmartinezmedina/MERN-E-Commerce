@@ -1,0 +1,14 @@
+{
+  "name": "mern-ecommerce",
+  "version": "1.0.0",
+  "description": "mern e-commerce app by rodmartinezmedina",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "author": "rodmartinezmedina",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
