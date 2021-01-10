@@ -15,8 +15,8 @@ const ProductScreen = ({ match }) => {
     }
 
     fetchProduct()
-    console.log('UseEffect on Product Screen. product is: ', product)
-  }, [])
+    console.log('UseEffect on Product Screen')
+  }, [match])
 
   return (
     <>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Navbar, Nav, Container, NavLink } from 'react-bootstrap'
+import { Navbar, Nav, Container, NavLink, LinkContainer } from 'react-bootstrap'
 
 const Header = () => {
   return (
