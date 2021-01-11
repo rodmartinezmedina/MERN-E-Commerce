@@ -3,16 +3,6 @@ import asyncHandler from 'express-async-handler'
 const router = express.Router()
 import Product from '../models/productModel.js'
 
-// router.get('/', async (req,res) => {
-//   try {
-//     const products =  await Product.find({})
-//     res.json(products)
-//   }
-//   catch (error) {
-//     console.error(error)
-//   }
-// })
-
 // Fetch all Products
 // GET / api/products
 // Public
@@ -35,10 +25,10 @@ router.get(
     if (product) {
       res.json(product)
     } else {
-      res.status(404).json({ message: 'Product not found' })
+      // if we dont res.status it would be a 500 by default
+      res.status(404)
+      throw new Error('Product not found')
     }
-    // const product = products.find((p) => p._id === req.params.id)
-    // res.json(product)
   })
 )
 
