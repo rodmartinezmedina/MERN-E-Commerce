@@ -46,6 +46,7 @@ const ProductScreen = ({ history, match }) => {
             {/* fluid keeps the image inside of its container */}
             <Image src={product.image} alt={product.name} fluid />
           </Col>
+
           <Col md={3}>
             <ListGroup variant='flush'>
               <ListGroup.Item>
@@ -63,9 +64,13 @@ const ProductScreen = ({ history, match }) => {
               </ListGroup.Item>
             </ListGroup>
           </Col>
+
           <Col>
-            <Card>
-              <ListGroup variant='flush'>
+            <Card style={{ margin: '0px', padding: '0px' }}>
+              <ListGroup
+                variant='flush'
+                style={{ margin: '0px', padding: '0px' }}
+              >
                 <ListGroup.Item>
                   <Row>
                     <Col>Price:</Col>
@@ -89,9 +94,10 @@ const ProductScreen = ({ history, match }) => {
                 {product.countInStock > 0 && (
                   <ListGroup.Item>
                     <Row>
-                      <Col>Qty </Col>
-                      <Col>
+                      <Col md={5}>Qty </Col>
+                      <Col md={7}>
                         <Form.Control
+                          style={{ padding: '0px' }}
                           as='select'
                           value={qty}
                           onChange={(e) => setQty(e.target.value)}
